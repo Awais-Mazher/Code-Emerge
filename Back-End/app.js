@@ -39,4 +39,10 @@ app.use("/api/submission", submissionRouter);
 
 app.use("/api/analyzer", analyzerRouter);
 
+// Base
+
+app.get("/", (req, res)=>{
+    res.send("API Working");
+})
+
 app.listen(process.env.PORT || 8000);

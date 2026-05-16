@@ -5,7 +5,7 @@ export const WebContext = createContext(null);
 
 const WebContextProvider = (props)=>{
 
-    const url = "http://localhost:4000";
+    const url = "https://code-emerge-be.vercel.app";
     const [token, setToken] = useState("");
     const [userData, setUserData] = useState({});
 
