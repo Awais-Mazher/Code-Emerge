@@ -1,0 +1,122 @@
+.features-section{
+    width: 100%;
+    height: 100vh;
+    margin: 40px 0;
+    background: url("../../assets/Features_Bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.feature-col{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50%;
+    padding: 0 60px;
+}
+
+.feature-col .feature{
+    width: 22rem;
+    padding: 50px 30px 30px;
+    color: #1e1e1e;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+}
+
+.feature .number-circle{
+    width: 65px;
+    height: 65px;
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: -32px;
+    transform: translateX(-50%);
+}
+
+.feature h3{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.feature p{
+    font-size: 15px;
+    line-height: 1.3rem;
+}
+
+/* Tablet View */
+
+@media screen and (max-width: 850px) {
+    .features-section{
+        margin: 30px 0;
+    }
+
+    .feature-col{
+        padding: 0px;
+    }
+
+    .feature-col .feature{
+        width: 17rem;
+        padding: 45px 20px 30px;
+    }
+
+    .feature .number-circle{
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+    
+    .feature h3{
+        font-size: 18px;
+        margin-bottom: 13px;
+    }
+    
+    .feature p{
+        font-size: 13px;
+    }
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 480px) {
+    .features-section{
+        height: auto;
+        padding-top: 100px;
+        background: var(--bg-color);
+    }
+
+    .feature-col{
+        flex-direction: column;
+    }
+
+    .feature-col .feature{
+        width: 20rem;
+        margin-bottom: 60px;
+        padding: 45px 25px 30px;
+    }
+
+    .feature .number-circle{
+        width: 65px;
+        height: 65px;
+        font-size: 30px;
+    }
+    
+    .feature h3{
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .feature p{
+        font-size: 15px;
+    }
+}

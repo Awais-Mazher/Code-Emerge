@@ -1,0 +1,229 @@
+.admin-home{
+    width: 100%;
+    height: 100%;
+}
+
+.admin-home .admin-info-cards{
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+
+.admin-info-cards .admin-info-card{
+    width: 25%;
+    padding: 30px 25px 20px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #363636;
+}
+
+.admin-info-card .info-icon{
+    font-size: 55px;
+    color: var(--primary-color);
+}
+
+.admin-info-card hr{
+    border: none;
+    outline: none;
+    height: 1px;
+    margin: 20px 0 25px;
+    background-color: rgb(184, 184, 184);
+}
+
+.info-items p{
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.info-items span{
+    font-size: 16px;
+    font-weight: 700;
+    background: linear-gradient(135deg, rgb(211, 211, 211), #bbbbbb);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.admin-info-cards .admin-info-card:last-child{
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.problem-division .problem-bar{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.problem-bar.easy{
+    background: conic-gradient(#22c55e 0% 45%, #2a2a2a 45% 100%);
+}
+
+.problem-bar.medium{
+    background: conic-gradient(#FF8C42 0% 45%, #2a2a2a 45% 100%);
+}
+
+.problem-bar.hard{
+    background: conic-gradient(#cc1919 0% 45%, #2a2a2a 45% 100%);
+}
+
+.problem-bar::before{
+    content: "";
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    background-color: #363636;
+    border-radius: 50%;
+}
+
+.problem-bar span{
+    position: relative;
+    font-weight: 600;
+}
+
+.problem-division p{
+    font-size: 15px;
+}
+
+/* Recent Problems */
+
+.admin-home .recent-problems{
+    width: 100%;
+    margin-top: 20px;
+    padding: 18px 25px;
+    border-radius: 12px;
+    background-color: #363636;
+}
+
+.recent-problems h1{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.recent-problems-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.recent-problems-container .recent-problem {
+    display: grid;
+    grid-template-columns:
+      60px        /* Sr # */
+      1.8fr       /* Name */
+      120px       /* Difficulty */
+      90px        /* Points */
+      140px;
+    align-items: center;
+    padding: 12px 10px;
+    border-radius: 2px;
+}
+
+.recent-problem:first-child {
+    font-weight: 600;
+    color: #cfcfcf;
+    border-bottom: 1px solid #4a4a4a;
+    padding-bottom: 14px;
+}
+
+.recent-problem:not(:first-child) {
+    background: #2e2e2e;
+}
+  
+.recent-problem:not(:first-child):hover {
+    background: #3a3a3a;
+}
+
+/* Tablet View */
+
+@media screen and (max-width: 850px) {
+    .admin-home .admin-info-cards{
+        flex-wrap: wrap;
+    }
+
+    .admin-info-cards .admin-info-card{
+        width: 48%;
+        padding: 30px 25px 20px;
+    }
+
+    .admin-info-cards .admin-info-card:last-child{
+        width: 99%;
+        margin: 5px 0;
+        justify-content: space-around;
+    }
+
+    .admin-home .recent-problems{
+        width: 99%;
+    }
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 480px) {
+    .admin-info-cards .admin-info-card{
+        width: 100%;
+        padding: 27px 16px 18px;
+    }
+
+    .admin-info-cards .admin-info-card:last-child{
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .problem-division .problem-bar{
+        width: 85px;
+        height: 85px;
+    }
+
+    .problem-bar::before{
+        width: 75px;
+        height: 75px;
+    }
+    
+    .problem-division p{
+        font-size: 13px;
+        line-height: 1.2rem;
+    }
+
+    .admin-home .recent-problems{
+        width: 100%;
+        margin-top: 15px;
+        padding: 20px 14px;
+    }
+
+    .recent-problems h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .recent-problems-container .recent-problem {
+        grid-template-columns:
+          30px        /* Sr # */
+          1fr      /* Name */
+          50px       /* Difficulty */
+          40px;        /* Points */
+        padding: 10px;
+        font-size: 9px;
+    }
+
+    .recent-problems-container .recent-problem span:nth-child(2){
+        padding-right: 7px;
+    }
+
+    .recent-problems-container .recent-problem > :nth-child(5){
+        display: none;
+    }
+    
+    .recent-problem:first-child {
+        font-size: 10px;
+    }
+}

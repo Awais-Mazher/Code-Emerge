@@ -1,0 +1,105 @@
+.leaderboard-section{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.leaderboard-section .leaderboard-cards{
+    gap: 4rem;
+    margin: 90px 0 40px;
+}
+
+.leaderboard-cards .leaderboard-card{
+    width: 22%;
+    padding: 50px 30px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    flex-direction: column;
+    background-color: rgb(8, 8, 8);
+}
+
+.leaderboard-card:nth-child(2){
+    position: relative;
+    top: 60px;
+}
+
+.leaderboard-card:last-child{
+    position: relative;
+    top: 120px;
+}
+
+.leaderboard-card .trophy-container{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -100px;
+    border-top: 2px solid var(--primary-color);
+    border-left: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+    background-color: rgb(8, 8, 8);
+}
+
+.trophy-container img{
+    width: 55%;
+}
+
+.leaderboard-card h3{
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 50px;
+    text-transform: lowercase;
+}
+
+.leaderboard-card .rank-points{
+    margin-top: 30px;
+    font-size: 32px;
+    font-weight: 600;
+    background: linear-gradient(135deg, rgb(99, 99, 99), #e2e2e2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.leaderboard-card .point-heading{
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* Tablet View */
+
+@media screen and (max-width: 850px) {
+    .leaderboard-section{
+        min-height: 118vh;
+        padding-top: 60px;
+    }
+
+    .leaderboard-section .leaderboard-cards{
+        gap: 1rem;
+        margin: 70px 0 40px;
+    }
+
+    .leaderboard-cards .leaderboard-card{
+        width: 33%;
+    }
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 480px) {
+    .leaderboard-section{
+        min-height: 90vh;
+        padding-top: 0;
+    }
+
+    .leaderboard-section .leaderboard-cards{
+        flex-direction: column;
+        margin: 90px 0 190px;
+    }
+
+    .leaderboard-cards .leaderboard-card{
+        width: 80%;
+    }
+
+    .trophy-container img{
+        width: 55%;
+    }
+}

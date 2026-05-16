@@ -1,0 +1,91 @@
+.problems-section{
+    width: 100%;
+    margin: 50px 0;
+}
+
+.problems-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 25px 60px;
+    margin-top: 50px;
+}
+
+.problems-container .problem{
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle,rgb(255, 136, 62) 0%, rgba(255, 117, 31, 1) 49%, rgba(255, 107, 12, 1) 100%);
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.problem:hover{
+    transition: transform 0.6s;
+}
+
+.problem:hover *{
+    transform: translateZ(10px);
+}
+
+.problem-upper:hover{
+    transform: perspective(600px) translateY(-6px) rotateX(-6deg);
+}
+
+.problem-bottom:hover{
+    transform: perspective(600px) translateY(-6px) rotateX(6deg);
+}
+
+.problem .icon{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.problem a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.problem h3{
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.problem p{
+    font-size: 15px;
+}
+
+/* Tablet View */
+
+@media screen and (max-width: 850px) {
+    .problems-container{
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+        gap: 25px 40px;
+    }
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 480px) {
+    .problems-section{
+        margin: -25px 0 25px;
+    }
+
+    .problems-container{
+        justify-items: center;
+        margin-top: 30px;
+    }
+
+    .problems-container .motion-wrapper{
+        width: 100%;
+    }
+
+    .problems-container .problem{
+        width: 80%;
+        margin: auto;
+        padding: 50px 15px;
+    }
+}

@@ -1,0 +1,162 @@
+.user-list{
+    width: 100%;
+    min-height: 90vh;
+    padding: 14px 20px;
+}
+
+.user-list .list-title{
+    font-size: 30px;
+    font-weight: 500;
+    word-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.user-list-container .list-row{
+    display: grid;
+    grid-template-columns:
+      80px        /* Sr # */
+      0.5fr       /* Username */
+      0.7fr       /* Email */
+      120px        /* Points */
+      150px       /* Problems Solved */
+      100px;
+    align-items: center;
+    padding: 14px 12px;
+    border-bottom: 1px solid #777777;
+    background-color: rgb(41, 41, 41);
+    border-radius: 2px;
+}
+
+.list-row:first-child{
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border-bottom: 0;
+    background: linear-gradient(135deg, #575757, #3d3d3d);
+}
+
+.list-row h3{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.list-row .user-title{
+    color: white;
+    font-size: 14px;
+}
+
+.list-row .user-title:hover{
+    color: var(--primary-color);
+}
+
+.list-row p{
+    font-size: 14px;
+}
+
+.list-row p:first-child{
+    padding-left: 5px;
+}
+
+.list-row .action-buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list-row .delete-btn, .list-row .edit-btn{
+    color: var(--text-color);
+    font-size: 18px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.list-row .delete-btn{
+    background-color: #f31a1a;
+}
+
+.list-row .edit-btn{
+    background-color: #e2bb0b;
+}
+
+/* Tablet View */
+
+@media screen and (max-width: 850px) {
+    .user-list{
+        padding: 5px 0;
+    }
+
+    .user-list .list-title{
+        font-size: 26px;
+    }
+
+    .user-list-container .list-row{
+        grid-template-columns:
+            60px        /* Sr # */
+            1fr       /* Username */
+            1.5fr       /* Email */
+            80px        /* Points */
+            100px       /* Problems Solved */
+            80px;
+        padding: 12px 10px;
+    }
+
+    .list-row h3{
+        font-size: 15px;
+    }
+    
+    .list-row p, .list-row .problem-title{
+        font-size: 13px;
+    }
+
+    .list-row p:nth-child(2){
+        padding-right: 7px;
+    }
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 480px) {
+    .user-list .list-title{
+        font-size: 22px;
+    }
+
+    .user-list-container .list-row{
+        grid-template-columns:
+            40px        /* Sr # */
+            1.2fr       /* Username */
+            1.3fr       /* Email */
+            40px;
+        padding: 10px 8px;
+    }
+
+    .list-row > :nth-child(4),
+    .list-row > :nth-child(5) {
+        display: none;
+    }
+
+    .list-row h3{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    
+    .list-row p, .list-row .problem-title{
+        font-size: 10px;
+    }
+
+    .list-row p:first-child{
+        padding-left: 0px;
+    }
+
+    .list-row .action-buttons{
+        gap: 6px;
+    }
+    
+    .list-row .delete-btn, .list-row .edit-btn{
+        font-size: 13px;
+        width: 18px;
+        height: 18px;
+    }
+}

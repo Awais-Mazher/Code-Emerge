@@ -1,0 +1,466 @@
+.user-dashboard{
+  width: 100%;
+  position: relative;
+  padding: 35px 100px 45px;
+}
+
+/* PROFILE BANNER */
+
+.user-dashboard .profile-banner{
+  width: 100%;
+  padding: 25px 40px;
+  border-radius: 7px;
+  background: linear-gradient(135deg, #363636, rgb(99, 99, 99));
+}
+
+.profile-banner .left-info{
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.left-info .profile-icon{
+  font-size: 55px;
+  color: var(--primary-color);
+  margin-right: 15px;
+}
+
+.profile-info h3{
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.profile-info h3.username{
+  text-transform: capitalize;
+}
+
+.profile-info p{
+  font-size: 15px;
+  color: #b9b9b9;
+}
+
+.profile-banner .right-info{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.right-info .rank-icon{
+  font-size: 33px;
+  margin-right: 15px;
+  color: var(--primary-color);
+}
+
+.rank-info h3{
+  font-size: 24px;
+}
+
+.rank-info p{
+  font-size: 14px;
+  color: #b9b9b9;
+}
+
+/* USER STATS MODALS */
+
+.user-dashboard .user-stats-container{
+  width: 100%;
+  margin:  30px 0 40px;
+  gap: 30px;
+}
+
+.user-stats-container .user-stats{
+  width: 24%;
+  padding: 30px 15px;
+  border-radius: 7px;
+  transition: all 0.3s;
+  background: #383838;
+}
+
+.user-stats:hover{
+  background: #323232;
+}
+
+.user-stats h3{
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.user-stats hr{
+  border: none;
+  outline: none;
+  height: 1px;
+  margin: 25px 0 30px;
+  background-color: rgb(158, 158, 158);
+}
+
+.user-stats .stats-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stats-info .stats-icon{
+  font-size: 28px;
+  color: var(--primary-color);
+}
+
+.stats-info span{
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.stats-info span.rank{
+  font-size: 16px;
+}
+
+.user-problem-data{
+  gap: 30px;
+  align-items: start;
+}
+
+.user-problem-data .problem-stat-container, .user-problem-data .problem-submissions{
+  width: 50%;
+  padding: 30px;
+  border-radius: 7px;
+  background-color: #383838;
+}
+
+.problem-stat-container h3, .problem-submissions h3{
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+/* USER'S PROBLEM STATS */
+
+.problem-stat-container .problem-stat{
+  width: 100%;
+  padding: 14px 20px;
+  justify-content: space-between;
+  border-radius: 5px;
+  margin-top: 15px;
+  background-color: #242424;
+}
+
+.problem-stat span{
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.problem-stat .progress-bar{
+  width: 82%;
+  height: 5px;
+  border-radius: 10px;
+  background-color: grey;
+}
+
+.progress-bar .progress{
+  height: 100%;
+  border-radius: 10px;
+}
+
+.progress.progress-1{
+  background-color: #22c55e;
+}
+
+.progress.progress-2{
+  background-color: #FF8C42;
+}
+
+.progress.progress-3{
+  background-color: #cc1919;
+}
+
+/* USER SUBMISSION TABLE */
+
+.submission-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2a2a2a;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.submission-table thead {
+  background-color: #242424;
+}
+
+.submission-table th {
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #b4b4b4;
+  letter-spacing: 0.5px;
+}
+
+.submission-table td {
+  padding: 14px 18px;
+  font-size: 14px;
+  line-height: 1.3rem;
+  color: #e5e5e5;
+}
+
+.submission-table td:nth-child(3).easy {
+  color: #22c55e;
+}
+
+.submission-table td:nth-child(3).medium {
+  color: #FF8C42;
+}
+
+.submission-table td:nth-child(3).hard {
+  color: #f12828;
+}
+
+.submission-table tbody tr {
+  border-bottom: 1px solid #333;
+  transition: background-color 0.25s ease;
+}
+
+.submission-table tbody tr:hover {
+  background-color: #242424;
+}
+
+.submission-table td:first-child,
+.submission-table th:first-child {
+  text-align: center;
+  width: 70px;
+}
+
+.submissions-link .link-text{
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.submissions-link .link-text:hover{
+  color: var(--primary-color);
+}
+
+.model-btn{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: var(--text-color);
+  background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  box-shadow: 0px 0px 2px 2px rgb(255, 140, 66, 0.2);
+  animation: glow 1s infinite ease;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.model-btn .icon{
+  font-size: 36px;
+}
+
+.model-btn .icon-text{
+  display: none;
+  width: max-content;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  position: absolute;
+  right: 65px;
+  background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+}
+
+.model-btn:hover .icon-text{
+  display: block;
+  animation: slideInLeft 0.4s ease;
+}
+
+@keyframes glow {
+  to {
+    box-shadow: 0px 0px 10px 10px rgb(255, 140, 66, 0.5);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    right: 55px;
+    opacity: 0;
+  }
+
+  to {
+    right: 65px;
+    opacity: 1;
+  }
+}
+
+/* Tablet View */
+
+@media screen and (max-width: 850px) {
+  .user-dashboard{
+    padding: 30px 50px 40px;
+  }
+
+  /* PROFILE BANNER */
+
+  .user-dashboard .profile-banner{
+    padding: 22px 35px;
+  }
+
+  .left-info .profile-icon{
+    font-size: 50px;
+  }
+
+  .profile-info h3{
+    font-size: 21px;
+  }
+
+  .profile-info p{
+    font-size: 13px;
+  }
+
+  .right-info .rank-icon{
+    font-size: 30px;
+  }
+
+  .rank-info h3{
+    font-size: 22px;
+  }
+
+  .rank-info p{
+    font-size: 13px;
+  }
+
+  /* USER STATS MODALS */
+
+  .user-dashboard .user-stats-container{
+    margin:  25px 0 35px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .user-stats-container .user-stats{
+    width: 48.7%;
+  }
+
+  .user-problem-data{
+    flex-wrap: wrap;
+  }
+
+  .user-problem-data .problem-stat-container, .user-problem-data .problem-submissions{
+    width: 100%;
+  }
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 480px) {
+  .user-dashboard{
+    padding: 25px 30px 40px;
+  }
+
+  /* PROFILE BANNER */
+
+  .user-dashboard .profile-banner{
+    flex-direction: column;
+  }
+
+  .profile-banner .left-info{
+    flex-direction: column;
+  }
+  
+  .left-info .profile-icon{
+    font-size: 70px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .profile-info h3{
+    text-align: center;
+    margin-bottom: 7px;
+  }
+  
+  .profile-info p{
+    font-size: 15px;
+  }
+  
+  .profile-banner .right-info{
+    width: 100%;
+    justify-content: space-between;
+    margin: 30px 0 10px;
+  }
+  
+  .right-info .rank-icon{
+    font-size: 40px;
+  }
+
+  .rank-info h3{
+    text-align: end;
+  }
+
+  /* USER STATS MODALS */
+  
+  .user-dashboard .user-stats-container{
+    margin:  25px 0 25px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .user-stats-container .user-stats{
+    width: 100%;
+  }
+
+  .user-problem-data .problem-stat-container, .user-problem-data .problem-submissions{
+    padding: 25px 20px;
+  }
+  
+  .problem-stat-container h3, .problem-submissions h3{
+    margin-bottom: 25px;
+  }
+
+  /* USER'S PROBLEM STATS */
+  
+  .problem-stat span{
+    font-weight: 500;
+  }
+  
+  .problem-stat .progress-bar{
+    width: 72%;
+    height: 4px;
+  }
+  
+  .progress-bar .progress{
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  /* USER'S SUBMISSION TABLE */
+
+  .submission-table{
+    table-layout: fixed;
+  }
+  
+  .submission-table th {
+    padding: 14px 15px;
+  }
+  
+  .submission-table td {
+    padding: 13px 15px;
+    font-size: 13px;
+  }
+
+  .submission-table td:first-child,
+  .submission-table th:first-child {
+    width: 50px;
+  }
+
+  .model-btn{
+    width: 50px;
+    height: 50px;
+  }
+  
+  .model-btn .icon{
+    font-size: 28px;
+  }
+  
+}

@@ -1,0 +1,142 @@
+.update-problem{
+    width: 100%;
+    padding: 14px 20px;
+    color: #ffffff;
+}
+
+.update-problem-title{
+  font-size: 30px;
+  font-weight: 500;
+  word-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+/* Form container */
+
+.update-problem-form{
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+/* Inputs */
+
+.problem-input{
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #555;
+  padding: 12px 4px;
+  color: #ffffff;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+  
+.problem-input::placeholder{
+  color: #9ca3af;
+}
+  
+.problem-input:focus{
+  border-bottom-color: #ff8c42;
+}
+  
+.problem-row{
+  display: flex;
+  gap: 30px;
+}
+
+select.problem-input{
+  border: none;
+  border-bottom: 1px solid #555;
+  border-radius: 0;
+  padding: 12px 36px 12px 4px;
+  cursor: pointer;
+  transition: border-color 0.25s ease;
+}
+  
+select.problem-input:focus{
+  border-bottom-color: #ff8c42;
+}
+
+select.problem-input option{
+  background-color: #1e1e1e;
+}
+
+.problem-textarea{
+  width: 100%;
+  background: transparent;
+  border: 1px solid #555;
+  padding: 14px;
+  color: #ffffff;
+  resize: none;
+  min-height: 120px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+  transition: border-color 0.25s ease;
+}
+  
+.problem-textarea::placeholder{
+  color: #9ca3af;
+}
+
+.problem-textarea:focus{
+  border-color: #ff8c42;
+}
+
+.update-problem-btn{
+  width: fit-content;
+  padding: 10px 20px;
+  background: #ff8c42;
+  color: #1e1e1e;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.40s ease;
+}
+  
+.update-problem-btn:hover{
+  background: #ff6b0c;
+}
+
+/* Tablet View */
+  
+@media (max-width: 850px){
+  .update-problem{
+    padding: 12px 16px;
+  }
+  
+  .update-problem-form{
+    max-width: 100%;
+  }
+  
+  .problem-row{
+    flex-direction: column;
+    gap: 26px;
+  }
+}
+
+/* Mobile View */
+  
+@media (max-width: 480px){
+  .update-problem{
+    padding: 0;
+  }
+
+  .update-problem-title{
+    font-size: 22px;
+  }
+  
+  .problem-input,
+  .problem-textarea{
+    font-size: 14px;
+  }
+  
+  .update-problem-btn{
+    width: 100%;
+    text-align: center;
+  }
+}
