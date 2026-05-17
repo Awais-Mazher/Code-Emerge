@@ -1,5 +1,6 @@
 import express from "express"
 import cors from "cors"
+import mongoose from "mongoose"
 import "dotenv/config"
 import dbConnection from "./config/db.js"
 import userRouter from "./routes/user.route.js"
@@ -15,7 +16,13 @@ app.use(cors());
 
 // DATABASE CONNECTION
 
-dbConnection();
+const startServer = async () => {
+    await dbConnection();
+
+    app.listen(process.env.PORT || 8000, () => {
+      console.log(`Server running on port ${process.env.PORT || 8000}`);
+    });
+};
 
 // API's
 
@@ -45,4 +52,4 @@ app.get("/", (req, res)=>{
     res.send("API Working");
 })
 
-app.listen(process.env.PORT || 8000);
+startServer();

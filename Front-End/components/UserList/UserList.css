@@ -125,15 +125,15 @@
 
     .user-list-container .list-row{
         grid-template-columns:
-            40px        /* Sr # */
-            1.2fr       /* Username */
             1.3fr       /* Email */
-            40px;
+            60px;
         padding: 10px 8px;
     }
 
-    .list-row > :nth-child(4),
-    .list-row > :nth-child(5) {
+    .user-list-container .list-row > :nth-child(1),
+    .user-list-container .list-row > :nth-child(2),
+    .user-list-container .list-row > :nth-child(4),
+    .user-list-container .list-row > :nth-child(5) {
         display: none;
     }
 
@@ -143,7 +143,7 @@
     }
     
     .list-row p, .list-row .problem-title{
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .list-row p:first-child{

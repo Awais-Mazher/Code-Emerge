@@ -164,8 +164,8 @@
 
 @media screen and (max-width: 480px) {
     .admin-dashboard .left-sidebar{
-        width: 15%;
-        padding: 20px 12px;
+        width: 18%;
+        padding: 20px 10px;
     }
 
     .left-sidebar .logo-mob{
@@ -184,7 +184,7 @@
     }
 
     .admin-dashboard .right-content{
-        width: 85%;
-        padding: 20px 30px;
+        width: 87%;
+        padding: 20px 15px;
     }
 }
