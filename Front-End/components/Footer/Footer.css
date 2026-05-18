@@ -196,26 +196,4 @@ footer .foot-line{
     .foot-right{
         margin-top: 0;
     }
-
-    .foot-line .icon-container{
-        width: 40px;
-        height: 40px;
-    }
-    
-    .icon-container .icon-globe{
-        font-size: 19px;
-    }
-
-    .foot-line hr{
-        width: 80%;
-    }
-
-    .foot-banner{
-        margin-top: 25px;
-        text-align: center;
-    }
-
-    .foot-banner span{
-        font-size: 15px;
-    }
 }

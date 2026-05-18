@@ -7,7 +7,6 @@ import { NavLink } from "react-router-dom"
 
 import { MdOutlineSearch } from "react-icons/md";
 import { FaCircleCheck } from "react-icons/fa6";
-import { toast } from 'react-toastify'
 
 const Problems = () => {
 
@@ -20,18 +19,8 @@ const Problems = () => {
   const [categoryInput, setCategoryInput] = useState("");
 
   const problemsFetching = async ()=>{
-    try {
-      const response = await axios.get(url+"/api/problem/problemsList");
-
-      if(response.data.success){
-        setProblemList(response.data.data);
-      }
-      else{
-        toast.error("Error fetching problems");
-      }
-    } catch (err) {
-      toast.error(err.message);
-    }
+    const response = await axios.get(url+"/api/problem/problemsList");
+    setProblemList(response.data.data);
   }
 
   const filteredProblems = problemList.filter(problem => {
@@ -124,7 +113,7 @@ const Problems = () => {
                       <p>{problem.category}</p>
                       <p>{problem.points}</p>
                     </motion.div>
-          }) : <p className='no-result-heading'>No problems found or matched the filter.</p>
+          }) : <p className='no-result-heading'>No problems found or matched the filter</p>
         }
       </div>
     </div>

@@ -1,4 +1,4 @@
-import problemModel from "../models/problem.model.js";
+import problemModel from "../models/problem.model.js"
 
 const addProblem = async (req, res)=>{
     try {
@@ -237,7 +237,7 @@ const getCategoryStats = async (req, res) => {
         data: stats
       });
   
-    } catch(err) {
+    }catch (err) {
       console.log(err);
       res.json({
         success: false,

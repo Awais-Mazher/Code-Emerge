@@ -367,7 +367,6 @@
 
   .profile-banner .left-info{
     flex-direction: column;
-    width: 100%;
   }
   
   .left-info .profile-icon{
@@ -448,14 +447,6 @@
   .submission-table td {
     padding: 13px 15px;
     font-size: 13px;
-  }
-
-  .submission-table th:nth-child(1) {
-    display: none;
-  }
-  
-  .submission-table td:nth-child(1) {
-    display: none;
   }
 
   .submission-table td:first-child,

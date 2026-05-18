@@ -125,9 +125,7 @@
 
     .how-it-works-container .steps-container{
         flex-direction: column;
-        width: 70%;
         margin: 0;
-        margin-right: 10px;
         height: 830px;
     }
 
@@ -149,20 +147,13 @@
         background-color: var(--text-color);
     }
 
-    .steps-container .step{
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-        font-weight: 600;
-    }
-
     .info-card-container{
         flex-direction: column;
         gap: 1.2rem;
     }
 
     .info-card-container .info-card{
-        width: 100%;
+        width: 90%;
         min-height: 270px;
         padding: 15px 20px;
     }

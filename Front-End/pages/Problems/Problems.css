@@ -184,6 +184,10 @@
         padding: 10px;
     }
 
+    .right-side .filter{
+        width: 160px;
+    }
+
     .right-side .filter::after{
         font-size: 16px;
     }
@@ -208,7 +212,7 @@
 
 @media screen and (max-width: 480px) {
     .problems{
-        padding: 20px;
+        padding: 30px;
     }
 
     .problems .main-heading{
@@ -233,12 +237,13 @@
     .problem-container .problem{
         grid-template-columns:
           70px        /* Status */
+          50px        /* Sr # */
           1fr       /* Title */
           50px        /* Points */
         ;
     }
 
-    .problem-container .problem > p:nth-child(2), p:nth-child(4) , p:nth-child(5){
+    .problem-container .problem > p:nth-child(4) , p:nth-child(5){
         display: none;
     }
 

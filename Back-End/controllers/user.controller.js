@@ -290,10 +290,10 @@ const getUsersRanking = async (req, res)=>{
             topUsers
         })
     } catch (err) {
-        console.log("getUsersRanking ERROR:", err);
+        console.log(err);
         res.json({
             success: false,
-            message: err.message
+            message: "There was an error fetching the Rankings"
         })
     }
 }
