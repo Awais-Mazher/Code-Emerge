@@ -52,6 +52,13 @@
     justify-content: space-between;
 }
 
+.admin-info-card .problem-division{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .problem-division .problem-bar{
     width: 110px;
     height: 110px;
@@ -207,23 +214,23 @@
 
     .recent-problems-container .recent-problem {
         grid-template-columns:
-          30px        /* Sr # */
           1fr      /* Name */
           50px       /* Difficulty */
           40px;        /* Points */
         padding: 10px;
-        font-size: 9px;
+        font-size: 10px;
     }
 
     .recent-problems-container .recent-problem span:nth-child(2){
         padding-right: 7px;
     }
 
-    .recent-problems-container .recent-problem > :nth-child(5){
+    .recent-problems-container .recent-problem > :nth-child(1), 
+    .recent-problems-container .recent-problem :nth-child(5){
         display: none;
     }
     
     .recent-problem:first-child {
-        font-size: 10px;
+        font-size: 11px;
     }
 }
